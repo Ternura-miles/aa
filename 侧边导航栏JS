@@ -1,0 +1,6 @@
+let nav2 = document.querySelectorAll(".nav2 li");
+    function activeLink() {
+        nav2.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+    }
+    nav2.forEach((item) => item.addEventListener("click", activeLink));
