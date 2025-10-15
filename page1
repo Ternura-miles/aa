@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>逆转裁判</title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/侧边导航.css" />
+</head>
+
+<body>
+	<div class="shell2">
+        <ul class="nav2">
+            <li class="active" id="logo">
+                <a >
+                    <div class="icon">
+                        <div class="imageBox">
+                        	<audio src="images/新建文件夹/beijingyiyue.mp3" id="music"></audio>
+                            <img class="wh" id="playButton" src="images/逆转像素小人/yujian.png" onclick="toggleMusic()" alt="播放音乐">
+                        </div>
+                    </div>
+                    <div class="text">逆转裁判</div>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/1012f9266eabfd1cfab3150935498417.png" alt="">
+                        </div>
+                        <i class="iconfont icon-cangku"></i>
+                    </div>
+                    <div class="text">首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="page1.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/3be6974258cd38efc079897000616f5e.png" alt="">
+                        </div>
+                        <i class="iconfont icon-zhuti_tiaosepan"></i>
+                    </div>
+                    <div class="text">玩法介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page2.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/cd66b7ffe687bf3acc400039ded792a8.png" alt="">
+                        </div>
+                        <i class="iconfont icon-qianbao"></i>
+                    </div>
+                    <div class="text">二创中心</div>
+                </a>
+            </li>
+            <li>
+                <a href="page6.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/f27eb78f040adcab31c4eb92d19f4a6c.png" alt="">
+                        </div>
+                        <i class="iconfont icon-tupian"></i>
+                    </div>
+                    <div class="text">人物介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page4.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/9fbad67b352c5c080c057524931947c6.png" alt="">
+                        </div>
+                        <i class="iconfont icon-erweima"></i>
+                    </div>
+                    <div class="text">出版时间</div>
+                </a>
+            </li>
+            <li>
+                <a href="page5.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/862132d30b4c820299ccbc12188cb832.png" alt="">
+                        </div>
+                        <i class="iconfont icon-dunpaibaoxianrenzheng"></i>
+                    </div>
+                    <div class="text">制作团队</div>
+                </a>
+            </li>
+            <li>
+                <a href="page3.html">
+                    <div class="icon">
+                        <div class="imageBox">
+                            <img src="images/逆转像素小人/fffa99be727f52dfd758668a935455bc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text">更多•关于卡普空</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="wrapper">
+        <div class=" header">
+           <div class="logo titlesytle"> <img src="images/chengbutang.png" alt="">逆转裁判</div>
+            <div class="logotext titlesytle"><a href="page8.html">注册</a><a href="page9.html">登录</a></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper titlesytle">
+            <ul>
+                <li><a href="index.html">首页</a> </li>
+                <li class="hover"> <a href="page1.html">玩法简介</a></li>
+                 <li> <a href="page2.html">二创中心</a></li>
+                <li> <a href="page6.html">人物介绍</a></li>
+                <li> <a href="page4.html">出版时间</a></li>
+                <li> <a href="page5.html">制作团队</a></li>
+                <li> <a href="page3.html">更多•关于卡普空</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tongzhi">
+    
+    <ul>
+        <li><a href="#">【重要通知】逆转裁判史低啦！！  逆转裁判史低啦！！ 逆转裁判史低啦！！</a></li>
+        <li><a href="#">【重要通知】闺蜜闺蜜想不想和我一起玩逆转裁判喵喵喵</a></li>
+        <li><a href="#">【重要通知】辩方和检方不许在法庭打情骂俏！！</a></li>
+    </ul>
+    </div>
+    <div class="wrapper banner">
+        <div class="carousel">
+            <div class="slides white">
+              <div class="slide"> <img src="images/新建文件夹/你装123.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/41b0b32ab076bce0bddbf485a1d33a1.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/da5553431b333b066dc09964b31284f.jpg" alt="banner" /> </div>
+            </div>
+            <div class="dots"> </div>
+            <div class="arrow left-arrow">&lt;</div>
+            <div class="arrow right-arrow">&gt;</div>
+        </div>
+    </div>
+    <div class="wrapper fengjing_page">
+        <h3 class="title titlesytle">
+            <div class="page_title">您的位置&nbsp;>&nbsp;<a href="index.html">首页</a>&nbsp;>&nbsp;玩法介绍</div>
+           玩法介绍</h3>
+            <ul>
+            
+            <li>
+                <h2>总体玩法介绍</h2>
+                听取证人的证词，玩家作为辩护律师进行“讯问”。讯问中可以直接对证词进行“追问”（ゆさぶる），也可以提出能够证明证词与事实有矛盾的证物“举证”（つきつける）。在逆转裁判6、雷顿教授VS逆转裁判、大逆转裁判中使用固定点数的5点生命值作为玩家错误辩护惩罚的凭借，选错部分关键选项或提交错误的证物会扣1点生命值，失去全部点数则游戏失败，委托人将获得有罪判决；除此以外的版本中生命值使用血槽来表现，根据迷题难易程度，扣血量会有所增减，一些重要迷题选错更会导致血槽大幅减少，同时同一天法庭部分中不会回复血槽。玩家在法庭部分可以使用“举证”“追问”或“看穿”“心音”等操作推动剧情发展。
+
+            </li>
+        </ul>
+            
+        <ul>
+            <li><img src="images/新建文件夹/yijinyali.jpg" alt="yi"></li>
+            <li>
+                <h2>异议！</h2>
+                玩家在证词中有矛盾的部分选择“つきつける”，再选择与之矛盾的证物。有时候随着剧情的推进，会要求玩家出示与证人的证词相矛盾的证物。2代和3代中也可以选择人物档案。如果选择正确则故事继续，否则则会受到惩罚并要求重来一次。
+
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>追问</h2>
+                对证词选择“ゆさぶる”，就能追问出详细的情报。有时不使用“つきつける”仅用追问也能推进剧情。追问之后有时会追加新的证词，追问中动摇的证人有时也会作出矛盾的证词，一般来说追问是不会被惩罚的，但有时也会惩罚，此时审判长会事先给予警告。
+            </li>
+            <li><img src="images/新建文件夹 (2)/436d1c61ece761bb221cb720ab07396.jpg" alt=""></li>
+        </ul>
+        <ul>
+            <li><img src="images/新建文件夹 (2)/a160a7607768f8204585d652104bf4e.jpg" alt=""></li>
+            <li>
+                <h2>心灵枷锁</h2>
+                2代中首次登场，在2-6代中均出现。对有心灵枷锁的人出示勾玉，会被问几个问题，玩家需分别出事正确的证物。选错会受到惩罚，血槽归零时会回复极少量并强制退出追问、而不会导致Game Over。解除成功后就可以讯问锁的相关情报并回复一半的血槽。此外心灵枷锁在发现时一般并不能马上用手头上的证物解除，一般都必须在其他场景深入调查获得新证物和情报之后返回才能解除。 </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>逻辑</h2>
+                《逆转检事》登场。御剑搜集在现场搜查中判明了的事实和感到疑问的事等。按L按钮或触摸“逻辑”面板，想起集到的情报，然后透过情报和情报的关联性，“整合”后便得出新的情报。</li>
+            <li><img src="images/新建文件夹 (2)/257a7dbfe2fc09e135e2265d258161a.jpg" alt=""></li>
+        </ul>
+        <ul>
+            <li><img src="images/新建文件夹 (2)/513b78647135fcf14a8539c40421579.jpg" alt=""></li>
+            <li>
+                <h2>整合</h2>
+                在逻辑模式中选择2个有关联的情报，按X按钮或触摸“整合”面板来整合一起，便会得到新的情报。如果整合了没有关联的情报，真相量就会减少。
+            </li>
+        </ul>
+
+    </div>
+    <div class="footer titlefont">
+        <ul>
+            <li><a href="index.html">首页</a> </li>
+            <li> <a href="page1.html">玩法介绍</a></li>
+            <li> <a href="page2.html">二创中心</a></li>
+            <li> <a href="page6.html">人物介绍</a></li>
+            <li> <a href="page4.html">出版时间</a></li>
+            <li> <a href="page5.html">制作团队</a></li>
+            <li> <a href="page3.html">更多 关于卡普空</a></li>
+        </ul>
+        Copyright © 逆转裁判</div>
+    <script src="js/js.js"></script>
+    <script type="text/javascript" src="js/cebiandaolangh.js" ></script>
+</body>
+
+</html>
