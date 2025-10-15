@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>逆转裁判</title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/侧边导航.css" />
+    <style>
+    	.zi{
+    	
+    		-webkit-background-clip: text;
+    		background-clip: text;
+    		color: transparent;
+    		letter-spacing: 10px;
+    		color:#074993 ;
+    	}
+    	* {
+            padding: 0;
+            margin: 0;
+        }
+
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .shell3{
+            width: 90%;
+            height: 700px;
+            display: flex;
+        }
+        .box{
+            flex: 1;
+            overflow: hidden;
+            transition: .5s;
+            margin: 0 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+            border-radius: 20px;
+            border: 10px solid #fff;
+            background-color: #FFFFFF;
+        }
+        .box>img{
+            width: 200%;
+            height: 85%;
+            object-fit: cover;
+            transition: .5s;
+        }
+        .box>span{
+            font: 200 35px '优设标题黑';
+            text-align: center;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box:hover{
+            flex-basis: 10%;
+        }
+        .box:hover>img{
+            width: 100%;
+            height: 100%;
+        }
+         .body5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+        }
+
+        .shell5 {
+            position: relative;
+            min-width: 1000px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* 设置3d变化 */
+            transform-style: preserve-3d;
+            /* 添加透视效果 */
+            perspective: 900px;
+        }
+
+        .shell5 .box3 {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            transition: 0.3s;
+            overflow: hidden;
+            margin: 30px;
+            transform: rotateY(0deg);
+            transition-delay: .1s;
+            border-radius: 5px;
+            border: #fff 5px solid;
+        }
+
+        /* 当鼠标所有卡片的父元素点shell上时，
+        所有卡片像Y轴翻转20度 */
+        .shell5:hover .box3 {
+            transform: rotateY(20deg);
+        }
+
+        /* 当鼠标悬浮在当前卡片上时，当前卡片的翻转角度为0，
+        并放大一点二五倍，加个阴影 */
+        .shell5 .box3:hover {
+            transform: rotateY(0deg) scale(1.25);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        /* 当鼠标悬浮在卡片上时，
+        当前卡片后面的所有卡片全部都反向翻转负20度 */
+        .shell5 .box3:hover~.box3 {
+            transform: rotateY(-20deg);
+        }
+
+        .shell5 .box3 .images img {
+            width: 100%;
+        }
+
+        .shell5 .box3 .content2 {
+            position: absolute;
+            top: 0;
+            width: 90%;
+            height: 100%;
+            z-index: 999;
+            padding: 15px;
+        }
+
+        .shell5 .box3 .content2 h2 {
+            color: rgb(210, 140, 140);
+            transition: 0.3s;
+            font-size: 20px;
+            transform: translateY(-100px);
+        }
+
+        .shell5 .box3:hover .content2 h2 {
+            transform: translateY(-15px);
+        }
+
+        .shell5 .box3 .content2 p {
+            color: rgb(0, 0, 0);
+            transition: 0.3s;
+            font-size: 14px;
+            transform: translateY(600px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .shell5 .box3:hover .content2 p {
+            transform: translateY(220px);
+        }
+      
+    </style>
+</head>
+
+<body>
+	<div class="shell2">
+        <ul class="nav2">
+            <li class="active" id="logo">
+            	<a >
+                    <div class="icon">
+                        <div class="imageBox">
+                        	<audio src="images/新建文件夹/beijingyiyue.mp3" id="music"></audio>
+                            <img class="wh" id="playButton" src="images/逆转像素小人/yujian.png" onclick="toggleMusic()" alt="播放音乐">
+                        </div>
+                    </div>
+                    <div class="text">逆转裁判</div>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/1012f9266eabfd1cfab3150935498417.png" alt="">
+                        </div>
+                        <i class="iconfont icon-cangku"></i>
+                    </div>
+                    <div class="text">首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="page1.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/3be6974258cd38efc079897000616f5e.png" alt="">
+                        </div>
+                        <i class="iconfont icon-zhuti_tiaosepan"></i>
+                    </div>
+                    <div class="text">玩法介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page2.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/cd66b7ffe687bf3acc400039ded792a8.png" alt="">
+                        </div>
+                        <i class="iconfont icon-qianbao"></i>
+                    </div>
+                    <div class="text">二创中心</div>
+                </a>
+            </li>
+            <li>
+                <a href="page6.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/f27eb78f040adcab31c4eb92d19f4a6c.png" alt="">
+                        </div>
+                        <i class="iconfont icon-tupian"></i>
+                    </div>
+                    <div class="text">人物介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page4.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/9fbad67b352c5c080c057524931947c6.png" alt="">
+                        </div>
+                        <i class="iconfont icon-erweima"></i>
+                    </div>
+                    <div class="text">出版时间</div>
+                </a>
+            </li>
+            <li>
+                <a href="page5.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/862132d30b4c820299ccbc12188cb832.png" alt="">
+                        </div>
+                        <i class="iconfont icon-dunpaibaoxianrenzheng"></i>
+                    </div>
+                    <div class="text">制作团队</div>
+                </a>
+            </li>
+            <li>
+                <a href="page3.html">
+                    <div class="icon">
+                        <div class="imageBox">
+                            <img src="images/逆转像素小人/fffa99be727f52dfd758668a935455bc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text">更多•关于卡普空</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class=" header">
+            <div class="logo titlesytle"> <img src="images/chengbutang.png" alt="">逆转裁判</div>
+            <div class="logotext titlesytle"><a href="page8.html">注册</a><a href="page9.html">登录</a></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper titlesytle">
+            <ul>
+               <li><a href="index.html">首页</a> </li>
+                <li > <a href="page1.html">玩法简介</a></li>
+                 <li > <a href="page2.html">二创中心</a></li>
+                <li class="hover"> <a href="page6.html">人物介绍</a></li>
+                <li> <a href="page4.html">出版时间</a></li>
+                <li > <a href="page5.html">制作团队</a></li>
+                <li > <a href="page3.html">更多•关于卡普空</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tongzhi">
+    
+    <ul>
+        <li><a href="#">【重要通知】逆转裁判史低啦！！  逆转裁判史低啦！！ 逆转裁判史低啦！！</a></li>
+        <li><a href="#">【重要通知】闺蜜闺蜜想不想和我一起玩逆转裁判喵喵喵</a></li>
+        <li><a href="#">【重要通知】辩方和检方不许在法庭打情骂俏！！</a></li>
+    </ul>
+    </div>
+    <div class="wrapper banner">
+        <div class="carousel">
+            <div class="slides white">
+              <div class="slide"> <img src="images/新建文件夹/你装123.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/41b0b32ab076bce0bddbf485a1d33a1.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/da5553431b333b066dc09964b31284f.jpg" alt="banner" /> </div>
+            </div>
+            <div class="dots"> </div>
+            <div class="arrow left-arrow">&lt;</div>
+            <div class="arrow right-arrow">&gt;</div>
+        </div>
+    </div>
+    <div class="wrapper fengjing_page">
+
+    <div class="wrapper history">
+        <h3 class="title titlesytle">
+            <div class="page_title">您的位置&nbsp;>&nbsp;<a href="index.html">首页</a>&nbsp;>&nbsp;人物介绍</div>
+           人物介绍</h3>
+           <div class="body">
+    <div class="shell3">
+        <div class="box">
+            <img src="images/新建文件夹 (3)/xiangye.jpg">
+            <span>牙琉响也</span>
+        </div>
+        <div class="box">
+            <img src="images/新建文件夹 (3)/nixi.jpg">
+            <span>王泥喜法</span>
+        </div>
+        <div class="box">
+            <img src="images/新建文件夹 (3)/yujian.jpg">
+            <span>御剑怜侍</span>
+        </div>
+        
+        <div class="box">
+            <img src="images/新建文件夹 (3)/cbt.jpg" >
+            <span>成步堂龙一</span>
+        </div>
+       
+        <div class="box">
+            <img src="images/新建文件夹 (3)/jiejie.jpg">
+            <span>绫里千寻</span>
+        </div>
+        <div class="box">
+            <img src="images/新建文件夹 (3)/zhenxiao.jpg">
+            <span>绫里真宵</span>
+        </div>
+         <div class="box">
+            <img src="images/新建文件夹 (3)/xiyue.jpg">
+            <span>希月心音</span>
+        </div>
+    </div>
+    </div>
+    <p class="zi"><font  >详细介绍</font></p>
+    <hr   />
+         <ul>
+            <li><img id="playButton1"  src="images/新建文件夹 (3)/chushilvshihuizhang.jpg" onclick="toggleMusic1()"  alt=""><audio src="images/新建文件夹 (3)/cbt异议.mp3" id="audio1"></audio></li>
+            <li>
+                <h2>成步堂龙一</h2>
+                在儿时好友御剑怜侍的影响下决心成为一名律师，后在老师绫里千寻的指导下得以完善，并且由于先后击败亚内武文、御剑怜侍、狩魔豪、狩魔冥、歌德（即神乃木庄龙）、夕神迅、亚内文武、那由他·史布国三等天才检察官而声名鹊起
+                <br />在第四部中遭人诬陷做为证，而失去了律师徽章，但是四部成步堂龙一，其幕后大佬一般成熟稳重，也是十分美味的一款熟男。<br />
+                
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>御剑怜侍</h2>
+                御剑怜侍（みつるぎ れいじ），日本游戏《逆转裁判》系列及其衍生作品、游戏《逆转检察官》系列中的角色，最初以检察官的身份登场，后晋升为检察院院长。拥有天才检察官的称号，有着出色的逻辑分析能力，一丝不苟的性格以及帅气绅士的外表，但是35岁仍旧未婚。<br />
+            逆转裁判系列中人气最高的角色，总之时嘴硬心软的傲娇猫猫，名场面"因为你的缘故，我心中产生了多余的感情"，非常可爱的人设。萌点时看似时成熟的大人其实会喜欢特摄剧呢（大将军）
+            </li>    
+            <li><audio src="images/新建文件夹 (3)/yujiandeng.mp3" id="audio2"></audio><img  id="playButton2"  src="images/新建文件夹 (3)/yujianluoxing.jpg" onclick="toggleMusic2()" alt=""></li>
+        </ul>
+        <ul>
+            <li><audio src="images/新建文件夹 (3)/kongqijitaye.mp3" id="audio3"></audio><img id="playButton3" onclick="toggleMusic3()" src="images/新建文件夹 (3)/yaliuxiangyewusan.jpg"></li>
+            <li>
+                <h2>牙琉响也</h2>
+                牙琉响也，游戏《逆转裁判》系列中的角色，登场于《逆转裁判4》《逆转裁判5》。
+17岁出道的天才检察官，牙琉雾人的弟弟，同时也是夺去成步堂律师生涯的检察官。另一方面则是牙琉乐团的领导跟主唱。法庭上经常表演空气吉他秀，登场时也有摇滚BGM陪衬。对于追求真实的执着高于打败对方，审判途中会不时给王泥喜提醒，偶尔在对方快要放弃希望时，还会自己跳出来指责证人。
+         <br /> 非常有个人魅力的检察官大人，是检察官也是摇滚乐队的主唱吉他手，不想其他检察官一样喜欢刁难律师，为人和善阳光，简直就是一只阳光开朗热情自信的金毛大狗。     
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>王泥喜法介</h2>
+                王泥喜法介（Apollo Justice），游戏《逆转裁判》系列中的角色，《逆转裁判4》《逆转裁判5》及《逆转裁判6》的主角之一。“青色闪电”牙琉雾人的弟子，是一名律师，特征是红色西装和锋利的头发。拥有神奇的力量，可以通过一个手镯来感觉其他人紧张的情绪，看到其他人紧张的小动作，从而得知证人是否在说谎或隐瞒。<br />
+            特别特别萌的宝宝！呆毛会显示情绪变化，平常状态下呆毛会直立起来，紧张或者心情不好呆毛就后从头上耷拉下拉，小兔子简直就是，只喜欢让牙琉响也一个人叫他大脑门君，虽然不喜欢吵闹的摇滚，但是喜欢牙琉波的所有歌曲。    
+            </li>
+            <li><audio src="images/新建文件夹 (3)/xiaowang.mp3" id="audio5"></audio><img id="playButton5" onclick="toggleMusic5()" src="images/新建文件夹 (3)/wangnixi.jpg" alt=""></li>
+        </ul>
+        <ul>
+            <li><audio src="images/新建文件夹 (3)/zhenxiao.mp3" id="audio6"></audio><img id="playButton6" onclick="toggleMusic6()" src="images/新建文件夹 (3)/zhenxiao1.jpg" alt=""></li>
+            <li>
+                <h2>绫里真宵</h2>
+               绫里真宵，“真宵”（まよい）于日文的读音同“迷い”（迷茫；迷糊）。游戏《逆转裁判》系列中的角色，第一部至第三部的女主角，《逆转裁判6》中也有登场。
+为人善良、纯真，是一名灵媒师，同时也是仓院流灵媒道的掌门继承人和成步堂律师事务所的副所长。拥有强大的灵力，可以召唤灵魂，绫里真宵用这种力量给予成步堂很多帮助。<br />
+            可爱的电波系女子，和御剑是大将军同好，很好很好的妹宝，很多颜艺小表情都出奇地可爱灵动。
+            </li>
+        </ul>
+         <ul>
+            <li>
+                <h2>绫里千寻</h2>
+               绫里千寻，日本游戏《逆转裁判》系列及其衍生作品中的角色，绫里律师事务所所长，成步堂龙一的上司兼老师，在法律界上有一定的名气，外号“鬼才律师”。名言是：“律师无论是在怎样的困境，都要在别人面前展露微笑。<br />
+        最好最好最好的姐姐！！！成熟有魅力的都市丽人，有正义感有追求，她从不是笼中鸟，她本该属于自由，小中大我恨你！！！
+            </li>
+            <li><audio src="images/新建文件夹 (3)/千寻异议.mp3" id="audio4"></audio><img src="images/新建文件夹 (3)/qianxunjie.jpg" id="playButton4" onclick="toggleMusic4()" alt=""></li>
+        </ul>
+        <ul>
+            <li><audio src="images/新建文件夹 (3)/xinying.mp3" id="audio7"></audio><img src="images/新建文件夹 (3)/yueyue.jpg" id="playButton7" onclick="toggleMusic7()" alt=""></li>
+            <li>
+                <h2>希月心音</h2>
+               与森澄巧之是从小就认识的好朋友。一个作为成步堂新助理的新手律师，在美国研习心理分析的她，在某个地方与成步堂龙一相会，并且加入成步堂事务所。是一位不喜欢认输、很容易引起争执、感情相当丰富的女孩子。右手的手套以及胸前的“模拟太”是开启特殊能力的道具。当证人发表证言时，每句话都会带有自己的情绪，藉由希月心音以及情感显示器“模拟太”的协助下，突破每句证词中的所隐藏的矛盾，揭开每个案件的真相。<br />
+            全天下最好的妹宝，可爱宝宝，只可惜被边缘化为卖CP的边缘人了，我恨。
+            </li>
+        </ul>
+     <p class="zi"><font  >其他人物</font></p>
+     <hr />
+     <div class="body5">
+    <div class="shell5">
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/shoumoming.png">
+            </div>
+            <div class="content2">
+                <h2>狩魔冥</h2>
+                <p>喜欢小冥的小鞭鞭大冒险吗，登录即送100抽！<br />狩魔派检事的真传，傲娇猫猫
+                
+      
+                </p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/wur.png">
+            </div>
+            <div class="content2">
+                <h2>牙琉雾人</h2>
+                <p>牙琉响也的兄长，与成步堂有着七年的交情，也是使成步堂失去律师徽章的幕后黑手
+                </p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/miju.png">
+            </div>
+            <div class="content2">
+                <h2>糸锯圭介</h2>
+                <p>对御剑检察官抱有超出检察官与刑警关系的深厚信赖，常与十分信赖的御剑一起奔走于现场。
+                </p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/bajie.png">
+            </div>
+            <div class="content2">
+                <h2>宝月巴</h2>
+                <p>她只得独自照顾妹妹宝月茜。虽然如此，她还是成功考上了法学院，在大三成为了学年第一。
+                </p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/xiaoqian.png">
+            </div>
+            <div class="content2">
+                <h2>宝月茜</h2>
+                <p>宝月茜（Ema Skye）是刑事科的一名科学搜查官，她是王泥喜法介最初几起案件的负责刑警。
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="body5">
+    <div class="shell5">
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/xishenxun.png">
+            </div>
+            <div class="content2">
+                <h2>夕神迅</h2>
+                <p>夕神迅，在担任检察官的同时，也是一名囚犯。在《逆转裁判6》中登场时
+                </p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/shexie.png">
+            </div>
+            <div class="content2">
+                <h2>ZeenChin</h2>
+                <p>The style in the painting integrates temptation, fantasy and strangeness
+                </p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/meiguan.png">
+            </div>
+            <div class="content2">
+                <h2>成步堂美贯</h2>
+                <p>The style in the painting integrates temptation, fantasy and strangeness
+                </p>
+            </div>
+        </div>
+       <div class="box3">
+            <div class="images">
+                <img src="images/新建文件夹 (3)/shennaimuzhung.png">
+            </div>
+            <div class="content2">
+                <h2>神乃木庄龙</h2>
+                <p>The style in the painting integrates temptation, fantasy and strangeness
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="footer titlefont">
+        <ul>
+            <li><a href="index.html">首页</a> </li>
+            <li> <a href="page1.html">玩法介绍</a></li>
+            <li> <a href="page2.html">故事梗概</a></li>
+            <li> <a href="page3.html">人物介绍</a></li>
+            <li> <a href="page4.html">出版时间</a></li>
+            <li> <a href="page5.html">制作团队</a></li>
+            <li> <a href="page6.html">更多 关于卡普空</a></li>
+        </ul>
+        Copyright © 逆转裁判</div>
+        
+      <script>
+      	      function toggleMusic1() {
+    var audio = document.getElementById('audio1');
+    var button = document.getElementById('playButton1');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      	        function toggleMusic2() {
+    var audio = document.getElementById('audio2');
+    var button = document.getElementById('playButton2');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      	         function toggleMusic3() {
+    var audio = document.getElementById('audio3');
+    var button = document.getElementById('playButton3');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      	          function toggleMusic4() {
+    var audio = document.getElementById('audio4');
+    var button = document.getElementById('playButton4');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      	        function toggleMusic4() {
+    var audio = document.getElementById('audio4');
+    var button = document.getElementById('playButton4');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      	        function toggleMusic5() {
+    var audio = document.getElementById('audio5');
+    var button = document.getElementById('playButton5');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      	         function toggleMusic6() {
+    var audio = document.getElementById('audio6');
+    var button = document.getElementById('playButton6');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      	          function toggleMusic7() {
+    var audio = document.getElementById('audio7');
+    var button = document.getElementById('playButton7');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+      </script>
+    <script src="js/js.js"></script>
+    <script type="text/javascript" src="js/cebiandaolangh.js" ></script>
+</body>
+
+</html>
