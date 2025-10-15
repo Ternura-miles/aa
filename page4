@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逆转裁判</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .shell {
+            width: 100%;
+            position: relative;
+            padding: 80px 0;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .shell:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(99, 99, 99, 0.8);
+            content: "";
+        }
+
+        .header1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .title1 {
+            color: #fff;
+            font-size: 46px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .timeline {
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            flex-direction: column;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .content-title {
+            font-weight: normal;
+            font-size: 66px;
+            margin: -10px 0 0 0;
+            transition: 0.4s;
+            padding: 0 10px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .content-desc {
+            margin: 0;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 25px;
+        }
+
+        .timeline:before {
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            margin-left: -1px;
+            content: "";
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .item {
+            padding: 40px 0;
+            opacity: 0.3;
+            filter: blur(2px);
+            transition: 0.5s;
+            box-sizing: border-box;
+            width: calc(50% - 40px);
+            display: flex;
+            position: relative;
+            transform: translateY(-80px);
+        }
+
+        .item:before {
+            /* 设置在伪元素before中的内容  */
+            content: attr(data-text);
+            letter-spacing: 3px;
+            width: 100%;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            border-left: 2px solid rgba(255, 255, 255, 0.5);
+            top: 70%;
+            margin-top: -5px;
+            padding-left: 15px;
+            opacity: 0;
+            right: calc(-100% - 56px);
+            font: 900 20px '';
+            letter-spacing: 5px;
+        }
+
+        .item:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        .item:nth-child(even):before {
+            right: auto;
+            text-align: right;
+            left: calc(-100% - 56px);
+            padding-left: 0;
+            border-left: none;
+            border-right: 2px solid rgba(255, 255, 255, 0.5);
+            padding-right: 15px;
+        }
+
+        .item--active {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
+        }
+
+        .item--active:before {
+            top: 50%;
+            transition: 0.3s all 0.2s;
+            opacity: 1;
+        }
+
+        .item--active .content-title {
+            margin: -50px 0 20px 0;
+        }
+
+        .img {
+            max-width: 100%;
+            width: 700px;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 16px;
+            letter-spacing: 5px;
+            margin: 10px 0 0 0;
+            font-weight: normal;
+        }
+
+        .footer {
+            padding: 95px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #999;
+            display: inline-block;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .item {
+                align-self: baseline !important;
+                width: 100%;
+                padding: 0 30px 150px 80px;
+            }
+
+            .item:before {
+                left: 10px !important;
+                padding: 0 !important;
+                top: 50px;
+                text-align: center !important;
+                width: 60px;
+                border: none !important;
+            }
+
+            .item:last-child {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+        }
+        </style>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/侧边导航.css" />
+</head>
+
+<body>
+	<div class="shell2">
+        <ul class="nav2">
+            <li class="active" id="logo">
+                <a >
+                    <div class="icon">
+                        <div class="imageBox">
+                        	<audio src="images/新建文件夹/beijingyiyue.mp3" id="music"></audio>
+                            <img class="wh" id="playButton" src="images/逆转像素小人/yujian.png" onclick="toggleMusic()" alt="播放音乐">
+                        </div>
+                    </div>
+                    <div class="text">逆转裁判</div>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/1012f9266eabfd1cfab3150935498417.png" alt="">
+                        </div>
+                        <i class="iconfont icon-cangku"></i>
+                    </div>
+                    <div class="text">首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="page1.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/3be6974258cd38efc079897000616f5e.png" alt="">
+                        </div>
+                        <i class="iconfont icon-zhuti_tiaosepan"></i>
+                    </div>
+                    <div class="text">玩法介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page2.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/cd66b7ffe687bf3acc400039ded792a8.png" alt="">
+                        </div>
+                        <i class="iconfont icon-qianbao"></i>
+                    </div>
+                    <div class="text">二创中心</div>
+                </a>
+            </li>
+            <li>
+                <a href="page6.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/f27eb78f040adcab31c4eb92d19f4a6c.png" alt="">
+                        </div>
+                        <i class="iconfont icon-tupian"></i>
+                    </div>
+                    <div class="text">人物介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page4.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/9fbad67b352c5c080c057524931947c6.png" alt="">
+                        </div>
+                        <i class="iconfont icon-erweima"></i>
+                    </div>
+                    <div class="text">出版时间</div>
+                </a>
+            </li>
+            <li>
+                <a href="page5.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/862132d30b4c820299ccbc12188cb832.png" alt="">
+                        </div>
+                        <i class="iconfont icon-dunpaibaoxianrenzheng"></i>
+                    </div>
+                    <div class="text">制作团队</div>
+                </a>
+            </li>
+            <li>
+                <a href="page3.html">
+                    <div class="icon">
+                        <div class="imageBox">
+                            <img src="images/逆转像素小人/fffa99be727f52dfd758668a935455bc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text">更多•关于卡普空</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <div class=" header">
+            <div class="logo titlesytle"> <img src="images/逆转像素小人/chengbutang.png" alt="逆转裁判">逆转裁判</div>
+            <div class="logotext titlesytle"><a href="page8.html">注册</a><a href="page9.html">登录</a></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper titlesytle">
+            <ul>
+                <li><a href="index.html">首页</a> </li>
+                <li> <a href="page1.html">玩法简介</a></li>
+                <li> <a href="page2.html">二创中心</a></li>
+                <li> <a href="page6.html">人物介绍</a></li>
+                <li class="hover"> <a href="page4.html">出版时间</a></li>
+              <li> <a href="page5.html">制作团队</a></li>
+                <li> <a href="page3.html">更多•关于卡普空</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tongzhi">
+    
+    <ul>
+        <li><a href="#">【重要通知】逆转裁判史低啦！！  逆转裁判史低啦！！ 逆转裁判史低啦！！</a></li>
+        <li><a href="#">【重要通知】闺蜜闺蜜想不想和我一起玩逆转裁判喵喵喵</a></li>
+        <li><a href="#">【重要通知】辩方和检方不许在法庭打情骂俏！！</a></li>
+    </ul>
+    </div>
+    <div class="wrapper banner">
+        <div class="carousel">
+            <div class="slides white">
+                <div class="slide"> <img src="images/新建文件夹/你装123.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/41b0b32ab076bce0bddbf485a1d33a1.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/da5553431b333b066dc09964b31284f.jpg" alt="banner" /> </div>
+            </div>
+            <div class="dots"> </div>
+            <div class="arrow left-arrow">&lt;</div>
+            <div class="arrow right-arrow">&gt;</div>
+        </div>
+    </div>
+    <div class="wrapper jiudian_page">
+        <h3 class="title titlesytle">
+            <div class="page_title">您的位置&nbsp;>&nbsp;<a href="index.html">首页</a>&nbsp;>&nbsp;出版时间</div>
+          出版时间</h3>
+
+    <div class="shell" id="shell">
+          	<div class="header1">
+          		<h2 class="title1">逆转系列出版时间线</h2>
+          		<h3 class="subitle">CAPCOM</h3>
+          	</div>
+          	<div class="timeline">
+          		<div class="item" data-text= "《逆转裁判第一部》">
+          			<div class="content">
+          				<img src="images/新建文件夹/47ea2d6b35488b1e0f007cabf2f82a7.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2001年</h2>
+          				<p class="content-desc">
+          					2001年10月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转裁判》第一次在GBA平台上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转裁判第二部》">
+          			<div class="content">
+          				<img src="images/新建文件夹/逆转2.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2002年</h2>
+          				<p class="content-desc">
+          					2002年10月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转裁判》续集第二部第一次在GBA平台上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转裁判第三部》">
+          			<div class="content">
+          				<img src="images/新建文件夹/逆转3.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2004年</h2>
+          				<p class="content-desc">
+          					2004年1月，时隔两年，由卡普空出品，巧舟导演策划的文字推理游戏《逆转裁判第三部》第一次在GBA平台上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转裁判：复苏的逆转》">
+          			<div class="content">
+          				<img src="images/新建文件夹/逆转1.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2005年</h2>
+          				<p class="content-desc">
+          					2005年9月，由卡普空出品，巧舟导演策划的文字推理游戏承接逆转裁判第一部与第二部的作品DLC《逆转裁判：复苏的逆转》初次发售
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转裁判123》">
+          			<div class="content">
+          				<img src="images/新建文件夹/你装123.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2006年</h2>
+          				<p class="content-desc">
+          					2006年3月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转裁判123》整合包在PC平台上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转裁判第四部》">
+          			<div class="content">
+          				<img src="images/新建文件夹/逆转4.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2007年</h2>
+          				<p class="content-desc">
+          					2007年4月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转裁判第四步=部》上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转检察官1》">
+          			<div class="content">
+          				<img src="images/新建文件夹/逆转检察官.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2009年</h2>
+          				<p class="content-desc">
+          					2009年5月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转检察官1》发售
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转检察官2》">
+          			<div class="content">
+          				<img src="images/新建文件夹/67339f5d124bd0477404e5b3b2466ad.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2011年</h2>
+          				<p class="content-desc">
+          					2011年10月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转检察官2》上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转裁判第五部》">
+          			<div class="content">
+          				<img src="images/新建文件夹/逆转5.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2013年</h2>
+          				<p class="content-desc">
+          					2013年6月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转裁判第五部》上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《逆转裁判第六部》">
+          			<div class="content">
+          				<img src="images/新建文件夹/逆转6.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2016年</h2>
+          				<p class="content-desc">
+          					2016年3月，由卡普空出品，巧舟导演策划的文字推理游戏《逆转裁判第六部》上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          		<div class="item" data-text= "《大逆转裁判1&2》">
+          			<div class="content">
+          				<img src="images/新建文件夹/caa0bb082ea11a07fb40859fed8bf53.jpg" height="500px" alt="逆转裁判" class="img"/>
+          				<h2 class="content-title">2021年</h2>
+          				<p class="content-desc">
+          					2021年3月，由卡普空出品，巧舟导演策划的文字推理游戏《大逆转裁判1&2》上线
+          					
+          				</p>
+          			</div>
+          		</div>
+          	</div>
+          	
+          </div>
+          
+
+       
+     <div class="footer"><a>页脚</a>
+    </div>
+        <ul>
+            <li><a href="index.html">首页</a> </li>
+            <li> <a href="page1.html">玩法介绍</a></li>
+            <li> <a href="page2.html">二创中心</a></li>
+            <li> <a href="page6.html">人物介绍</a></li>
+            <li> <a href="page4.html">出版时间</a></li>
+            <li> <a href="page5.html">制作团队</a></li>
+            <li> <a href="page3.html">更多 关于卡普空</a></li>
+        </ul>
+        Copyright © 逆转裁判</div>
+        <script type="text/javascript" src="js/js.js" ></script>
+        <script type="text/javascript" src="js/cebiandaolangh.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script >
+        (function ($) {
+            $.fn.timeline = function () {
+                var selectors = {
+                    id: $(this),
+                    item: $(this).find(".item"),
+                    activeClass: "item--active",
+                    img: ".img"
+                };
+                // 将第一个时间轴项目激活，并设置时间轴背景图片为第一个项目的图片
+                selectors.item.eq(0).addClass(selectors.activeClass);
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    selectors.item
+                        .first()
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                // 获取时间轴项目的总数
+                var itemLength = selectors.item.length;
+                // 当页面滚动时，触发滚动事件
+                $(window).scroll(function () {
+                    var max, min;
+                    // 获取页面滚动的距离
+                    var pos = $(this).scrollTop();
+                    selectors.item.each(function (i) {
+                        // 获取当前时间轴项目的最小和最大高度
+                        min = $(this).offset().top;
+                        max = $(this).height() + $(this).offset().top;
+                        var that = $(this);
+                        // 如果滚动到最后一个项目，并且超过了当前项目高度的一半，
+                        // 则将最后一个项目设置为激活状态，并设置背景图片为最后一个项目的图片
+                        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                            selectors.item.removeClass(selectors.activeClass);
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                selectors.item
+                                    .last()
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.last().addClass(selectors.activeClass);
+                        }
+                        // 如果当前滚动位置在当前项目的最小和最大高度之间，
+                        // 则将当前项目设置为激活状态，并设置背景图片为当前项目的图片
+                        else if (pos <= max - 10 && pos >= min) {
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                $(this)
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.removeClass(selectors.activeClass);
+                            $(this).addClass(selectors.activeClass);
+                        }
+                    });
+                });
+            };
+        })(jQuery)
+        /*
+        最后，我们调用 timeline 插件并传入时间轴的 ID 作为参数。
+        这将启用时间轴插件并为该时间轴绑定滚动事件。
+        */
+        $("#shell").timeline();
+    </script>
+</body>
+
+</html>
