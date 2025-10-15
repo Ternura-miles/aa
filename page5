@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>逆转裁判</title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/侧边导航.css" />
+   <style>
+   	.jieduan{
+   		-webkit-background-clip: text;
+    		background-clip: text;
+    		color: transparent;
+    		letter-spacing: 10px;
+    		color:#074993 ;
+    		}
+   		.wrapper2{
+   			width: 1200px;
+            margin: 0px auto;
+            overflow: hidden;
+   		}
+   	
+  
+   	 .body8 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap:10px;
+            justify-content: center;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 10px;
+            
+        }
+        
+        /* 卡片容器 */
+        .wrap1 {
+            position: relative;
+            width: 330px;
+            height: 260px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border-radius: 0 0 30px 30px;
+            margin: 0 auto;
+            margin-top: 20px;
+            
+        }
+        
+        /* 上部分 - 照片区域 */
+        .box-top {
+            position: relative;
+            width: 330px;
+            height: 130px;
+            background-color: rgb(180, 180, 210);
+            display: flex;
+            justify-content: center;
+            transition: .5s;
+        }
+        
+        /* 卡片底部三角形装饰 */
+        .box-top::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            clip-path: polygon(50% 40%, 0 0, 100% 0);
+            background-color: rgb(180, 180, 210);
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            bottom: -38px;
+            z-index: 999;
+        }
+      
+        
+         .image1 {
+            position: absolute;
+            top: 20px;
+            width: 90px;
+            height: 90px;
+            background-image: url(images/chengbutang.png);
+            background-size: cover;
+            border: 5px solid rgb(140, 140, 170);
+            transition: .5s;
+        }
+        .image2 {
+            position: absolute;
+            top: 20px;
+            width: 90px;
+            height: 90px;
+            background-image: url(images/逆转像素小人/yujian.png);
+            background-size: cover;
+            border: 5px solid rgb(140, 140, 170);
+            transition: .5s;
+        }
+        .image3 {
+            position: absolute;
+            top: 20px;
+            width: 90px;
+            height: 90px;
+            background-image: url(images/逆转像素小人/665e2857de9f48dc76110d4cb5fe1a0d.png);
+            background-size: cover;
+            border: 5px solid rgb(140, 140, 170);
+            transition: .5s;
+        }
+        .image4 {
+            position: absolute;
+            top: 20px;
+            width: 90px;
+            height: 90px;
+            background-image: url(images/逆转像素小人/92d5cbd7e93147765d297dd5b386b8f8.png);
+            background-size: cover;
+            border: 5px solid rgb(140, 140, 170);
+            transition: .5s;
+        }
+        .image5 {
+            position: absolute;
+            top: 20px;
+            width: 90px;
+            height: 90px;
+            background-image: url(images/逆转像素小人/ff1ad5f928e1bfdbe2fb47350ca213f0.png);
+            background-size: cover;
+            border: 5px solid rgb(140, 140, 170);
+            transition: .5s;
+        }
+        .image6 {
+            position: absolute;
+            top: 20px;
+            width: 90px;
+            height: 90px;
+            background-image: url(images/逆转像素小人/28bb9a74c62891d300b1b4fb654d9b6b.png);
+            background-size: cover;
+            border: 5px solid rgb(140, 140, 170);
+            transition: .5s;
+        }
+        }
+         .box-bottom, .box-bottom2 {
+            position: absolute;
+            top: 130px;
+            width: 330px;
+            height: 130px;
+            text-align: center;
+            transition: .5s;
+        }
+        
+        /* 主要信息样式 */
+        .box-bottom h2 {
+            display: block;
+            margin: 30px 0 10px 0;
+            font: 800 28px 'Hobo Std';
+            align-content: ;
+        }
+        
+        .box-bottom span {
+            font: 400 24px 'Giddyup Std';
+        }
+        
+        .box-bottom h2::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 4px);
+        }
+         .wrap1:hover .box-top {
+            height: 260px;
+        }
+        
+        .wrap1:hover .image1 {
+           width: 150px;
+            height: 150px;
+            border-width: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+         .wrap1:hover .image2 {
+           width: 150px;
+            height: 150px;
+            border-width: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+         .wrap1:hover .image3{
+           width: 150px;
+            height: 150px;
+            border-width: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .wrap1:hover .image6{
+           width: 150px;
+            height: 150px;
+            border-width: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .wrap1:hover .image4{
+           width: 150px;
+            height: 150px;
+            border-width: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .wrap1:hover .image5{
+           width: 150px;
+            height: 150px;
+            border-width: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+       
+        
+        .wrap1:hover .box-bottom {
+            top: 300px;
+        }
+        
+        .wrap1:hover .box-bottom2 {
+            top: 300px;
+        }
+        
+        li:hover {
+            color: rgb(100, 160, 160);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 1050px) {
+            .body8 {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            .wrap1 {
+                width: 300px;
+            }
+            .box-top, .box-bottom, .box-bottom2 {
+                width: 300px;
+            }
+        }
+        .zi{
+    	
+    		-webkit-background-clip: text;
+    		background-clip: text;
+    		color: transparent;
+    		letter-spacing: 10px;
+    		color:#074993 ;
+    	}
+    	.aboutus2 {
+   
+    padding: 22px 0px;
+    margin-bottom: 32px;
+}
+
+.aboutus2 ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutus2 li img {
+    width: 320px;
+    margin-right: 38px;
+}
+         .zi1{
+         	margin-left: 600px;
+         	letter-spacing: 10px;
+         	font-size: 20px;
+         	padding: 0px;
+         
+         	
+         }
+   </style>
+
+    	
+        
+</head>
+
+<body>
+	<div class="shell2">
+        <ul class="nav2">
+            <li class="active" id="logo">
+                <a >
+                    <div class="icon">
+                        <div class="imageBox">
+                        	<audio src="images/新建文件夹/beijingyiyue.mp3" id="music"></audio>
+                            <img class="wh" id="playButton" src="images/逆转像素小人/yujian.png" onclick="toggleMusic()" alt="播放音乐">
+                        </div>
+                    </div>
+                    <div class="text">逆转裁判</div>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/1012f9266eabfd1cfab3150935498417.png" alt="">
+                        </div>
+                        <i class="iconfont icon-cangku"></i>
+                    </div>
+                    <div class="text">首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="page1.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/3be6974258cd38efc079897000616f5e.png" alt="">
+                        </div>
+                        <i class="iconfont icon-zhuti_tiaosepan"></i>
+                    </div>
+                    <div class="text">玩法介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page2.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/cd66b7ffe687bf3acc400039ded792a8.png" alt="">
+                        </div>
+                        <i class="iconfont icon-qianbao"></i>
+                    </div>
+                    <div class="text">二创中心</div>
+                </a>
+            </li>
+            <li>
+                <a href="page6.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/f27eb78f040adcab31c4eb92d19f4a6c.png" alt="">
+                        </div>
+                        <i class="iconfont icon-tupian"></i>
+                    </div>
+                    <div class="text">人物介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page4.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/9fbad67b352c5c080c057524931947c6.png" alt="">
+                        </div>
+                        <i class="iconfont icon-erweima"></i>
+                    </div>
+                    <div class="text">出版时间</div>
+                </a>
+            </li>
+            <li>
+                <a href="page5.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/862132d30b4c820299ccbc12188cb832.png" alt="">
+                        </div>
+                        <i class="iconfont icon-dunpaibaoxianrenzheng"></i>
+                    </div>
+                    <div class="text">制作团队</div>
+                </a>
+            </li>
+            <li>
+                <a href="page3.html">
+                    <div class="icon">
+                        <div class="imageBox">
+                            <img src="images/逆转像素小人/fffa99be727f52dfd758668a935455bc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text">更多•关于卡普空</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class=" header">
+            <div class="logo titlesytle"> <img src="images/chengbutang.png" alt="">逆转裁判</div>
+            <div class="logotext titlesytle"><a href="page8.html">注册</a><a href="page9.html">登录</a></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper titlesytle">
+            <ul>
+               <li><a href="index.html">首页</a> </li>
+                <li > <a href="page1.html">玩法简介</a></li>
+                 <li> <a href="page2.html">二创中心</a></li>
+                <li> <a href="page6.html">人物介绍</a></li>
+                <li> <a href="page4.html">出版时间</a></li>
+                <li class="hover"> <a href="page5.html">制作团队</a></li>
+                <li> <a href="page3.html">更多•关于卡普空</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tongzhi">
+    
+    <ul>
+        <li><a href="#">【重要通知】逆转裁判史低啦！！  逆转裁判史低啦！！ 逆转裁判史低啦！！</a></li>
+        <li><a href="#">【重要通知】闺蜜闺蜜想不想和我一起玩逆转裁判喵喵喵</a></li>
+        <li><a href="#">【重要通知】辩方和检方不许在法庭打情骂俏！！</a></li>
+    </ul>
+    </div>
+    <div class="wrapper banner">
+        <div class="carousel">
+            <div class="slides white">
+               <div class="slide"> <img src="images/新建文件夹/你装123.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/41b0b32ab076bce0bddbf485a1d33a1.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/da5553431b333b066dc09964b31284f.jpg" alt="banner" /> </div>
+            </div>
+            <div class="dots"> </div>
+            <div class="arrow left-arrow">&lt;</div>
+            <div class="arrow right-arrow">&gt;</div>
+        </div>
+    </div>
+   <div class="wrapper banner">
+        <h3 class="title titlesytle">
+            <div class="page_title">您的位置&nbsp;>&nbsp;<a href="index.html">首页</a>&nbsp;>&nbsp;制作团队</div>
+            制作团队</h3>
+ 
+<div class="body8">
+    <div class="wrap1">
+        <div class="box-top">
+            <div class="image1">
+            	
+            </div>
+        </div>
+        <div class="box-bottom">
+            <h2>末包久美子</h2>
+            <span>人物角色设计</span>
+        </div>
+        <div class="box-bottom2">
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+   
+    
+    <div class="wrap1">
+        <div class="box-top">
+            <div class="image2"></div>
+        </div>
+        <div class="box-bottom">
+            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;巧舟</h2>
+            <span>总导演，策划和剧本</span>
+        </div>
+        <div class="box-bottom1">
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+    
+    
+    <div class="wrap1">
+        <div class="box-top">
+            <div class="image3"></div>
+        </div>
+        <div class="box-bottom">
+            <h2>岩元辰郎</h2>
+            <span>人物立绘绘制</span>
+        </div>
+        <div class="box-bottom2">
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+    <div class="wrap1">
+        <div class="box-top">
+            <div class="image4"></div>
+        </div>
+        <div class="box-bottom">
+            <h2>大谷规之</h2>
+            <span>主程序制作</span>
+        </div>
+        <div class="box-bottom2">
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+     <div class="wrap1">
+        <div class="box-top">
+            <div class="image5"></div>
+        </div>
+        <div class="box-bottom">
+            <h2>杉森雅和</h2>
+            <span>游戏内音乐制作</span>
+        </div>
+        <div class="box-bottom2">
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+     <div class="wrap1">
+        <div class="box-top">
+            <div class="image6"></div>
+        </div>
+        <div class="box-bottom">
+            <h2>远藤正胜</h2>
+            <span>人物立绘绘制</span>
+        </div>
+        <div class="box-bottom2">
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="jieduan">
+     <p class="zi"><font  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;详细介绍</font></p>
+    <hr   />
+    </div>
+    
+           <div class="aboutus">
+        <div class="wrapper">
+            <h3 class="title titlesytle">总导演：巧舟</h3>
+            <ul>
+                <li> <img src="images/新建文件夹 (3)/qiaozhou11.jpg" alt="逆转裁判简介"> </li>
+                <li>
+                    <p>巧舟，天才的游戏制作人，有着天才的点子以及寥寥几笔便可勾勒出一个人物神韵的文学功底，逆转裁判系列的总导演，策划，以及编剧，是主角成步堂龙一的最初配音。</p>
+                    <p>于1994年加入CAPCOM，与现已退社的神谷英树同期加入，出道作是《学校恐怖传说 花子来了！》（学校のコワイうわさ 花子さんがきた!!）
+
+                    </p>
+                    <p>巧舟最知名的作品是“逆转裁判系列”，但在《逆转裁判4》中已失去在开发组的领导地位，甚至没有参与《逆转检事》和《逆转裁判5》的开发。个人观点，失去巧舟的逆转裁判像失去了本味和灵魂。
+                    </p>
+                    <p>尽管失去了逆转系列开发的领导地位，但作为逆转生父的巧舟仍参与开发了2012年的《雷顿教授VS逆转裁判》，并在2015年7月9日发布的新作《大逆转裁判》中担任导演。
+                    </p>
+                    <p>“希望有一天能做出一个让所有人都有从未体验过的新鲜感的侦探游戏……”这就是巧舟进入CAPCOM之后6年间的梦想。
+                    </p>
+                    <p>
+                    	一开始逆转裁判的制作团队加上巧舟只有七个人，是个规模非常小的制作团队，一开始大家都没有信心成功获得成功，结果逆转裁判一经上市便获得一致好评，真是可喜可贺，也能看出巧舟对于游戏制作的市场前瞻性和天赋
+                    	
+                    </p>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+           <div class="aboutus2">
+        <div class="wrapper2">
+            <h3 class="title titlesytle">初代人物主设计：末包久美子</h3>
+            <ul>
+                
+                <li>
+                    <p>《逆转裁判》（逆転裁判，Gyakuten Saiban）系列游戏也以其独特的画风著称，一代人物设计的主笔便是当时日本著名的漫画家：末包久美子</p>
+                    <p>末包久美子（すえかね くみこ），是日本著名女性漫画家、角色设计师。初代的人物设计的人设以及画风皆是出自这位女士只手，对于成步堂人设以前御剑人设的设定真是让逆转裁判如此大放异彩的一大原因
+
+                    </p>
+                    <p>过去在CAPCOM工作着，曾担任『逆转裁判』和『红侠乔伊』的角色设计师，之后就从CAPCOM辞职了，进行着作为漫画家的活动。
+                    </p>
+                    <p>《从CAPCOM退社之后，也协力参与制作『逆转裁判2』『逆转裁判3』。在BL商业志方面用的是“むとべりょう”的名义。
+                    </p>
+                    <p>《逆转裁判》第二代以及带三代虽然久美子女士并未直接参与设计，但是也给各位人物的人设提供了很多帮助。
+                    </p>
+                    <p>
+                    	有意思的是，久美子对于成步堂和御剑的设定与现在大相径庭，初代成步堂的人设图并非如今的蓝西装刺猬头而是一头绿发的冒失男孩
+                    	御剑也并非现在的俊美的天才检察官，而是一个神似狩魔豪的胡子大叔，改成现在这样也是一种天才的改动
+                    </p>
+                    <p> 右图为出自久美子笔上的早期官图</p>
+
+                </li>
+                <li> <img src="images/新建文件夹 (3)/jiumeizi.jpg" alt="逆转裁判简介"> </li>
+           
+            </ul>
+        </div>
+    </div>
+    <p class="zi1">一些出自久美子老师之手的早期官图</p>
+    
+    <div class="aboutus2">
+    	<div class="wrapper2">
+    		
+    		<ul>
+    			<li><img src="images/新建文件夹 (3)/cbtchushe.png"</li>
+    			<p>看起来格外青涩的成步堂</p>
+    			<li><img src="images/新建文件夹 (3)/yujianchushe.png"</li>
+    			<p>格外精英感的小兔法介</p>
+    			<li><img src="images/新建文件夹 (3)/fajiechushe.png"</li>
+    			<p>大叔版御剑...</p>
+    			
+    		</ul>
+    	</div>
+    </div>
+     <div class="aboutus">
+        <div class="wrapper">
+            <h3 class="title titlesytle">音乐制作：杉森雅和</h3>
+            <ul>
+                <li> <img src="images/新建文件夹 (2)/微信图片_202506042318216.jpg" alt="逆转裁判简介"> </li>
+                <li>
+                    <p>"逆转裁判音乐之父"制作了初代逆转裁判中的所有音乐，也是奠定了逆转裁判系列电子音乐的风格</p>
+                    <p>这个人在逆转所有作曲家中，作品最少（只有逆转1那些），可是却寿命最长，为什么呢？因为他定下了音乐的基调。以后所有人作曲都得顺着他的路子。
+
+                    </p>
+                    <p>，MUSE SOUND 代表/作曲家。制作了初代《逆转裁判》的所有乐曲，此外他还为游戏角色狩魔豪配音。曾参与制作过《红侠乔伊》、《幽灵诡计》、《龙珠英雄》系列等多部作品。
+                    </p>
+                    <p>当遇上需要的乐曲数量特别多的时候，我也曾采用过理论上的制作方式，先定下节奏和低音，然后在此基础上加入合适的和声与曲调。但我觉得最好的乐曲还是得听天由命的，比如《逆转裁判》中的《大江户战士 大将军》（大江戸戦士トノサマン）。 
+                    </p>
+                    <p>“希望有一天能做出一个让所有人都有从未体验过的新鲜感的侦探游戏……”这就是巧舟进入CAPCOM之后6年间的梦想。
+                    </p>
+                    <p>
+                    	一开始逆转裁判的制作团队加上巧舟只有七个人，是个规模非常小的制作团队，一开始大家都没有信心成功获得成功，结果逆转裁判一经上市便获得一致好评，真是可喜可贺，也能看出巧舟对于游戏制作的市场前瞻性和天赋
+                    	
+                    </p>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="zi1">经典的逆转第一代的音乐</p>
+    
+    <div class="aboutus">
+    	<div class="wrapper">
+    		
+    		<ul>
+    			<p>大将军 主题曲</p>
+    			<li><audio src="images/新建文件夹 (3)/杉森雅和 - 大江戸戦士トノサマン (大江户战士 大将军).mp4" id="audio1"></audio><img id="playButton1" src="images/新建文件夹 (3)/cbtzhuiwen.jpg" onclick="toggleMusic1()"/></li>
+    
+    			<li><audio id="audio3" src="images/新建文件夹 (3)/lovelove.mp3"></audio><img id="playButton3" onclick="toggleMusic3()" src="images/新建文件夹 (2)/微信图片_202506042318215.jpg"</li>
+    			<p>love love guilty!</p>
+    			<li><audio src="images/新建文件夹 (3)/日本群星 - 成歩堂龍一 異議あり！ 2001.mp4" id="audio2"></audio><img src="images/新建文件夹 (3)/jianghuch.jpg" id="playButton2" onclick="toggleMusic2()"/></li>
+    			<p>成歩堂龍一 異議あり！</p>
+    			
+    		</ul>
+    	</div>
+    </div>
+    
+   
+    
+    
+    <div class="footer titlefont">
+        <ul>
+            <li><a href="index.html">首页</a> </li>
+            <li> <a href="page1.html">玩法介绍</a></li>
+            <li> <a href="page2.html">二创中心</a></li>
+            <li> <a href="page3.html">人物介绍</a></li>
+            <li> <a href="page4.html">出版时间</a></li>
+            <li> <a href="page5.html">制作团队</a></li>
+            <li> <a href="page6.html">更多 关于卡普空</a></li>
+        </ul>
+        Copyright © 逆转裁判</div>
+    <script src="js/js.js"></script>
+    <script>
+    	 function toggleMusic1() {
+    var audio = document.getElementById('audio1');
+    var button = document.getElementById('playButton1');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+    	  function toggleMusic2() {
+    var audio = document.getElementById('audio2');
+    var button = document.getElementById('playButton2');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+    	   function toggleMusic3() {
+    var audio = document.getElementById('audio3');
+    var button = document.getElementById('playButton3');
+    if (audio.paused) {
+        audio.play();
+        
+    } else {
+        audio.pause();
+        
+    }
+}
+    </script>
+    <script type="text/javascript" src="js/cebiandaolangh.js" ></script>
+</body>
+
+</html>
