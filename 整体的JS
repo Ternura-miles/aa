@@ -1,0 +1,113 @@
+ document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelector('.slides');
+    const dotsContainer = document.querySelector('.dots');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    let currentSlide = 0;
+    let intervalId;
+
+ 
+    function createDots() {
+      for (let i = 0; i < slides.children.length; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === currentSlide) {
+          dot.classList.add('active');
+        }
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+
+    function updateDots() {
+      const dots = dotsContainer.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+ 
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.children.length;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      updateDots();
+    }
+
+  
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.children.length) % slides.children.length;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      updateDots();
+    }
+
+ 
+    function autoPlay() {
+      intervalId = setInterval(nextSlide, 2600);
+    }
+
+ 
+    function stopAutoPlay() {
+      clearInterval(intervalId);
+    }
+
+
+    dotsContainer.addEventListener('click', function (event) {
+      if (event.target.classList.contains('dot')) {
+        currentSlide = Array.from(dotsContainer.children).indexOf(event.target);
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateDots();
+        stopAutoPlay();
+        autoPlay();
+      }
+    });
+
+
+    leftArrow.addEventListener('click', function () {
+      prevSlide();
+      stopAutoPlay();
+      autoPlay();
+    });
+
+ 
+    rightArrow.addEventListener('click', function () {
+      nextSlide();
+      stopAutoPlay();
+      autoPlay();
+    });
+
+
+    createDots();
+
+
+    autoPlay();
+
+   
+    slides.addEventListener('mouseenter', stopAutoPlay);
+
+    
+    slides.addEventListener('mouseleave', autoPlay);
+  });
+
+
+     document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            setTimeout(function(){
+                window.location.href = 'index.html';
+            }, 3000);
+        });
+        function toggleMusic() {
+    var audio = document.getElementById('music');
+    var button = document.getElementById('playButton');
+    if (audio.paused) {
+        audio.play();
+        button.src = "images/新建文件夹/yijinyali.jpg"; // 替换为暂停图片的文件名
+    } else {
+        audio.pause();
+        button.src = "images/逆转像素小人/yujian.png"; // 替换为播放图片的文件名
+    }
+}
