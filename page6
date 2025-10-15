@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>逆转裁判</title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/侧边导航.css" />
+</head>
+
+<body>
+	<div class="shell2">
+        <ul class="nav2">
+            <li class="active" id="logo">
+                <a >
+                    <div class="icon">
+                        <div class="imageBox">
+                        	<audio src="images/新建文件夹/beijingyiyue.mp3" id="music"></audio>
+                            <img class="wh" id="playButton" src="images/逆转像素小人/yujian.png" onclick="toggleMusic()" alt="播放音乐">
+                        </div>
+                    </div>
+                    <div class="text">逆转裁判</div>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/1012f9266eabfd1cfab3150935498417.png" alt="">
+                        </div>
+                        <i class="iconfont icon-cangku"></i>
+                    </div>
+                    <div class="text">首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="page1.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/3be6974258cd38efc079897000616f5e.png" alt="">
+                        </div>
+                        <i class="iconfont icon-zhuti_tiaosepan"></i>
+                    </div>
+                    <div class="text">玩法介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page2.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/cd66b7ffe687bf3acc400039ded792a8.png" alt="">
+                        </div>
+                        <i class="iconfont icon-qianbao"></i>
+                    </div>
+                    <div class="text">二创中心</div>
+                </a>
+            </li>
+            <li>
+                <a href="page6.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/f27eb78f040adcab31c4eb92d19f4a6c.png" alt="">
+                        </div>
+                        <i class="iconfont icon-tupian"></i>
+                    </div>
+                    <div class="text">人物介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page4.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/9fbad67b352c5c080c057524931947c6.png" alt="">
+                        </div>
+                        <i class="iconfont icon-erweima"></i>
+                    </div>
+                    <div class="text">出版时间</div>
+                </a>
+            </li>
+            <li>
+                <a href="page5.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/862132d30b4c820299ccbc12188cb832.png" alt="">
+                        </div>
+                        <i class="iconfont icon-dunpaibaoxianrenzheng"></i>
+                    </div>
+                    <div class="text">制作团队</div>
+                </a>
+            </li>
+            <li>
+                <a href="page3.html">
+                    <div class="icon">
+                        <div class="imageBox">
+                            <img src="images/逆转像素小人/fffa99be727f52dfd758668a935455bc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text">更多•关于卡普空</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+   
+    <div class="wrapper">
+        <div class=" header">
+            <div class="logo titlesytle"> <img src="images/chengbutang.png" alt="">逆转裁判</div>
+            <div class="logotext titlesytle"><a href="page8.html">注册</a><a href="page9.html">登录</a></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper titlesytle">
+            <ul>
+                <li><a href="index.html">首页</a> </li>
+                <li > <a href="page1.html">玩法简介</a></li>
+                 <li> <a href="page2.html">二创中心</a></li>
+                <li > <a href="page6.html">人物介绍</a></li>
+                <li> <a href="page4.html">出版时间</a></li>
+                <li> <a href="page5.html">制作团队</a></li>
+                <li class="hover"> <a href="page3.html">更多•关于卡普空</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tongzhi">
+    
+    <ul>
+        <li><a href="#">【重要通知】逆转裁判史低啦！！  逆转裁判史低啦！！ 逆转裁判史低啦！！</a></li>
+        <li><a href="#">【重要通知】闺蜜闺蜜想不想和我一起玩逆转裁判喵喵喵</a></li>
+        <li><a href="#">【重要通知】辩方和检方不许在法庭打情骂俏！！</a></li>
+    </ul>
+    </div>
+    <div class="wrapper banner">
+        <div class="carousel">
+            <div class="slides white">
+               <div class="slide"> <img src="images/新建文件夹/你装123.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/41b0b32ab076bce0bddbf485a1d33a1.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/da5553431b333b066dc09964b31284f.jpg" alt="banner" /> </div>
+            </div>
+            <div class="dots"> </div>
+            <div class="arrow left-arrow">&lt;</div>
+            <div class="arrow right-arrow">&gt;</div>
+        </div>
+    </div>
+    <div class="wrapper xianlu_page">
+        <h3 class="title titlesytle">
+            <div class="page_title">您的位置&nbsp;>&nbsp;<a href="index.html">首页</a>&nbsp;>&nbsp;更多•关于卡普空</div>
+           更多•关于卡普空<img src="images/新建文件夹/capcom.jpg" height="100px"/> </h3>
+        <h2><b class="titlesytle">CAPCOM（卡普空株式会社、株式会社カプコン）是日本电视游戏软件公司，成立于1979年。总部在日本。台湾登记名为“卡普空”，香港登记为“嘉富康”，官网简体中文页面及中国大陆登记为“喀普康”</b> <br>
+        <b class="titlesytle">CAPCOM除了逆转裁判以外还发行过其他一系列非常优秀的游戏，接下来为大家介绍</b>
+
+            <ul>
+                <li><b>卡普空发售最多的游戏系列</b> <strong>生化危机</strong><br>《生化危机》（日本名称：バイオハザード、Biohazard，欧美名称：Resident Evil），是由日本CAPCOM公司推出的系列单机游戏。该系列游戏的首作于1996年首次推出，是以反生物武器和反生化恐怖主义为主题的生存恐怖冒险类单机游戏系列。
+生化危机系列游戏是反生物武器和反生化恐怖主义以及恐怖、惊悚、生存、解谜、冒险、动作、射击等元素为主题的游戏中极具影响力的代表作品。
+生化危机系列游戏迄今已推出了上百款游戏（包含早期的各个游戏平台不同分支版本）。除了游戏之外，生化危机系列还衍生出了小说、漫画、动画、网剧、电影等多种丰富的改编作品。生化危机系列游戏也会一直延续下去并且随着时代的演变和技术的进步，加入更多的新风格、新元素、新玩法，拓展更多的新故事、新角色。
+"一种让玩家感到极度恐惧的世界观；一个关于在绝望的情况下幸存下来的故事；以及由玩家被迫做出的每个选择所创造的战略游戏玩法。"这些因素的结合，造就了《生化危机》系列的独特号召力，并赢得了全球游戏界的高度赞誉。<br /><img src="images/新建文件夹/shenghua.jpg" width="500px"/>
+                </li>
+                <li> <b>卡普空最广为人知的游戏系列</b>
+                    <strong> 怪物猎人</strong><br>怪物猎人，原名モンスターハンター ，英文名Monster Hunter，是由CAPCOM研发的一系列动作角色扮演游戏，于2004年03月11日首发行。玩家要在游戏中扮演猎人，不断狩猎怪物，获得装备和金钱，并让自己的猎人等级上升。
+北京时间2021年7月23日7点，东京奥运会开幕式在东京国立竞技场举行。在代表团入场环节中，入场曲目包含众多游戏、动画音乐，其中包括《怪物猎人》作品的经典配乐。 
+2022年7月5日，IT之家消息，据卡普空官方消息，《怪物猎人：崛起》系列销量破1000万份，《怪物猎人》全系列游戏销量突破8400万份。
+2023年TGA颁奖典礼中，公布续作《怪物猎人：荒野》信息，该作于2025年发售。 <br>怪物猎人的核心玩法是采集素材、狩猎怪物、制作装备、再挑战更强的怪物。玩法单一目标纯粹，但单一的玩法充满变数 ：每片狩猎场都各具特色；怪物种类繁多，招式和弱点大不相同；装备繁多功能各异，选择搭配很费心力
+<br /><img src="images/新建文件夹/OIP-C.jpg" width="500px" />
+                </li>
+                <li> <b>卡普空著名的乙女游戏</b>
+                    <strong>无法触碰的掌心</strong><br>《被囚禁的掌心》是一款女性向恋爱养成游戏。《被囚禁的掌心》登陆任天堂Switch平台，于19年8月30日发售，支持简体中文与繁体中文
+2023年6月27日消息，卡普空女性向冒险解谜手游《无法触碰的掌心》国服宣布将于8月31日起停运，简中版项目组已经在着手离线版本的开发与测试。
+ <br>游戏中，玩家们将通过手机屏幕，与被囚禁在孤岛收容所中的青年晴人互动，通过他的种种回忆和想法，逐渐去解开曾经的故事。但这位自我封闭的少年，是不会轻易对外敞开心扉的。你需要用你丰富的恋爱经验，去逐渐引导他去交流，然后观察他的日常生活作息，从而引导他逐渐打开内心。
+ <br /><img src="images/新建文件夹 (3)/无法.jpg" width="500px" />
+                </li>
+                <li><b>卡普空最经典的街机格斗游戏</b>
+                    <strong>街头霸王</strong><br>《街头霸王》是由日本CAPCOM公司于1987年首次推出的格斗类单机游戏系列，第一代游戏于1987年8月30日发行。游戏内主要角色有隆、肯、春丽、春日野樱、亚力克斯、维加、豪鬼等。
+正统游戏系列包括初代的《街头霸王1》、《街头霸王2》系列、《少年街霸》系列、《街头霸王3》系列、《街头霸王4》系列、《街头霸王5》系列（剧情时间顺序为1-Z-2-4-5-3）、《街头霸王6》 [3]，此外还有《街头霸王EX》系列、《街头霸王ol》等非正统游戏系列，另有衍生动画、电影、漫画等。
+《街霸》系列的剧情围绕着来自世界各地、参与“世界格斗大会”的街头战士们展开。1987年8月在日本的街机厅中出现了一种二人对战游戏，比起早年的《功夫》有了巨大的飞跃，这就是CAPCOM所推出的街机格斗游戏《街头霸王》 <br>
+                    <img  src="images/新建文件夹 (2)/59a312164cfc374dab26b54a708e190f.jpg" width="500px"/> </li>
+
+            </ul>
+    </div>
+    <div class="footer titlefont">
+        <ul>
+            <li><a href="index.html">首页</a> </li>
+            <li> <a href="page1.html">玩法介绍</a></li>
+            <li> <a href="page2.html">二创中心</a></li>
+            <li> <a href="page6.html">人物介绍</a></li>
+            <li> <a href="page4.html">出版时间</a></li>
+            <li> <a href="page5.html">制作团队</a></li>
+            <li> <a href="page3.html">更多 关于卡普空</a></li>
+        </ul>
+        Copyright © 逆转裁判</div>
+    <script src="js/js.js"></script>
+    <script type="text/javascript" src="js/cebiandaolangh.js" ></script>
+</body>
+
+</html>
