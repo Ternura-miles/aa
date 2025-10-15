@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>逆转裁判</title>
+    <style>
+    	 * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(235, 151, 151);
+        }
+
+        #photo{
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .shell {
+            display: grid;  /*网格布局*/
+            padding: 20px;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 270px;
+            grid-auto-flow: dense;
+        }
+
+        .shell>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(61, 51, 51);
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            font: 100 100px 'Kristen ITC';
+            position: relative;
+        }
+
+       
+        .shell .wide {
+            grid-column: span 2;
+        }
+
+        .shell .tall {
+            grid-row: span 2;
+        }
+
+        .shell .big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    </style>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/侧边导航.css" />
+</head>
+
+<body>
+	<div class="shell2">
+        <ul class="nav2">
+            <li class="active" id="logo">
+               <a >
+                    <div class="icon">
+                        <div class="imageBox">
+                        	<audio src="images/新建文件夹/beijingyiyue.mp3" id="music"></audio>
+                            <img class="wh" id="playButton" src="images/逆转像素小人/yujian.png" onclick="toggleMusic()" alt="播放音乐">
+                        </div>
+                    </div>
+                    <div class="text">逆转裁判</div>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/1012f9266eabfd1cfab3150935498417.png" alt="">
+                        </div>
+                        <i class="iconfont icon-cangku"></i>
+                    </div>
+                    <div class="text">首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="page1.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/3be6974258cd38efc079897000616f5e.png" alt="">
+                        </div>
+                        <i class="iconfont icon-zhuti_tiaosepan"></i>
+                    </div>
+                    <div class="text">玩法介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page2.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/cd66b7ffe687bf3acc400039ded792a8.png" alt="">
+                        </div>
+                        <i class="iconfont icon-qianbao"></i>
+                    </div>
+                    <div class="text">二创中心</div>
+                </a>
+            </li>
+            <li>
+                <a href="page6.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/f27eb78f040adcab31c4eb92d19f4a6c.png" alt="">
+                        </div>
+                        <i class="iconfont icon-tupian"></i>
+                    </div>
+                    <div class="text">人物介绍</div>
+                </a>
+            </li>
+            <li>
+                <a href="page4.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/9fbad67b352c5c080c057524931947c6.png" alt="">
+                        </div>
+                        <i class="iconfont icon-erweima"></i>
+                    </div>
+                    <div class="text">出版时间</div>
+                </a>
+            </li>
+            <li>
+                <a href="page5.html">
+                    <div class="icon">
+                    	<div class="imageBox">
+                            <img src="images/逆转像素小人/862132d30b4c820299ccbc12188cb832.png" alt="">
+                        </div>
+                        <i class="iconfont icon-dunpaibaoxianrenzheng"></i>
+                    </div>
+                    <div class="text">制作团队</div>
+                </a>
+            </li>
+            <li>
+                <a href="page3.html">
+                    <div class="icon">
+                        <div class="imageBox">
+                            <img src="images/逆转像素小人/fffa99be727f52dfd758668a935455bc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text">更多•关于卡普空</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <div class=" header">
+            <div class="logo titlesytle"> <img src="images/chengbutang.png" alt="">逆转裁判</div>
+            <div class="logotext titlesytle"><a href="page8.html">注册</a><a href="page9.html">登录</a></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper titlesytle">
+            <ul>
+                <li><a href="index.html">首页</a> </li>
+                <li > <a href="page1.html">玩法简介</a></li>
+                 <li class="hover"> <a href="page2.html">二创中心</a></li>
+                <li> <a href="page6.html">人物介绍</a></li>
+                <li> <a href="page4.html">出版时间</a></li>
+                <li> <a href="page5.html">制作团队</a></li>
+                <li > <a href="page3.html">更多•关于卡普空</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tongzhi">
+    
+    <ul>
+        <li><a href="#">【重要通知】逆转裁判史低啦！！  逆转裁判史低啦！！ 逆转裁判史低啦！！</a></li>
+        <li><a href="#">【重要通知】闺蜜闺蜜想不想和我一起玩逆转裁判喵喵喵</a></li>
+        <li><a href="#">【重要通知】辩方和检方不许在法庭打情骂俏！！</a></li>
+    </ul>
+    </div>
+    <div class="wrapper banner">
+        <div class="carousel">
+            <div class="slides white">
+                <div class="slide"> <img src="images/新建文件夹/你装123.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/41b0b32ab076bce0bddbf485a1d33a1.jpg" alt="banner" /> </div>
+                <div class="slide"> <img src="images/新建文件夹/da5553431b333b066dc09964b31284f.jpg" alt="banner" /> </div>
+            </div>
+            <div class="dots"> </div>
+            <div class="arrow left-arrow">&lt;</div>
+            <div class="arrow right-arrow">&gt;</div>
+        </div>
+    </div>
+    <div class="wrapper meishi_page">
+        <h3 class="title titlesytle">
+            <div class="page_title">您的位置&nbsp;>&nbsp;<a href="index.html">首页</a>&nbsp;>&nbsp;二创中心</div>
+            二创中心</h3>
+            <div class="shell">
+        <div class="tall">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318211.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo"  src="images/新建文件夹 (2)/微信图片_20250604231820.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_20250604231821.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="wide">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318214.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318215.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="tall">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318212.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="big">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318213.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318224.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="wide">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318217.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="big">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318223.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="tall">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318219.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318222.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo"  src="images/新建文件夹 (2)/微信图片_202506042318216.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_20250604231822.png" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318221.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="wide">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318218.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_20250604231752.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_20250604231822.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="wide">
+            <img id="photo"  src="images/新建文件夹 (2)/b6696c5acaabf5a4d84a9ee35b31beb.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318226.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="wide">
+            <img id="photo" src="images/新建文件夹 (2)/96b46e65cacc313102bcbf54306b965.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="big">
+            <img id="photo" src="images/新建文件夹 (2)/1d5fcbec920feb827737e955e299d9d.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/62cd68e30ab2b06ef6dd43bddbde403.png" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/77c07a185bae7d8629dd2fec8149163.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="big">
+            <img id="photo" src="images/新建文件夹 (2)/f84f069d30b23084beff59f7a84155e.jpg" alt="">
+            <span></span>
+        </div>
+        <div class="tall">
+            <img id="photo" src="images/新建文件夹 (2)/微信图片_202506042318225.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img id="photo" src="images/新建文件夹 (2)/26cc6b9e31014bb8da1d08f0985d093.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img  id="photo"  src="images/新建文件夹 (2)/860ebc5b16c86aa9e3fa2a2630b45e8.jpg" alt="">
+            <span></span>
+        </div>
+        <div>
+            <img  id="photo" src="images/新建文件夹 (2)/0dcca95dfacc45f91e16bee4f6caa88.jpg" alt="">
+            <span></span>
+        </div>
+         <div class="wide">
+            <img id="photo"  src="images/新建文件夹 (2)/4b4ced6c86d02f1eb5d3554f11f3fd1.jpg" alt="">
+            <span></span>
+        </div>
+    </div>
+       
+    
+    </div>
+    <div class="footer titlefont">
+        <ul>
+           <li><a href="index.html">首页</a> </li>
+            <li> <a href="page1.html">玩法介绍</a></li>
+            <li> <a href="page2.html">二创中心</a></li>
+            <li> <a href="page3.html">人物介绍</a></li>
+            <li> <a href="page4.html">出版时间</a></li>
+            <li> <a href="page5.html">制作团队</a></li>
+            <li> <a href="page6.html">更多 关于卡普空</a></li>
+        </ul>
+        Copyright © 逆转裁判</div>
+    <script src="js/js.js"></script>
+    <script type="text/javascript" src="js/cebiandaolangh.js" ></script>
+
+</body>
+
+</html>
